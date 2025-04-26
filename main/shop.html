@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     
-<!-- Mirrored from html.reactheme.com/muchwowindex by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:34 GMT -->
+<!-- Mirrored from html.reactheme.com/muchwow/main/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:34 GMT -->
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,7 +98,7 @@
                 <div class="panel">
                     <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
                         <li><a href="/index">Home</a></li>
-                        <li><a href="about">About us</a></li>
+                        <li><a href="/main/about">About us</a></li>
                         <li>
                             <a href="#" onclick="showProductsDropDown()">
                                 <span>Our Products</span>
@@ -106,12 +106,12 @@
                             </a>
                         </li>
                         <ul class="menu-panel-products-dropdown" style="padding-left: 14px; display: none; line-height: 30px;">
-                            <li><a href="shop">All Products</a></li>
-                            <li><a href="shop?category=chocolate">Chocolates</a></li>
-                            <li><a href="shop?category=bundles">Bundles</a></li>
-                            <li><a href="shop?category=offers">Offers</a></li>
+                            <li><a href="/main/shop">All Products</a></li>
+                            <li><a href="/main/shop?category=chocolate">Chocolates</a></li>
+                            <li><a href="/main/shop?category=bundles">Bundles</a></li>
+                            <li><a href="/main/shop?category=offers">Offers</a></li>
                         </ul>
-                        <li><a href="blogs">Blogs</a></li>
+                        <li><a href="/main/blogs">Blogs</a></li>
                         <li>
                             <a href="#" onclick="showCatalogueDropDown()">
                                 <span>Catalogue</span>
@@ -148,7 +148,7 @@
                         </ul>
                         <li class="hr opacity-10 my-1"></li>
                     </ul>
-                    <a style="background-color: #E31E23; color: #fff; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex" href="contact">
+                    <a style="background-color: #E31E23; color: #fff; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 lg:d-inline-flex" href="/main/contact">
                         <span>Get in touch</span>
                     </a>
                     <ul class="nav-x gap-1 mt-4">
@@ -192,7 +192,7 @@
                             <div class="uc-navbar-center">
                                 <ul style="color: white; font-family: aeonik;" class="uc-navbar-nav fs-5 xl:fs-4 gap-3 lg:gap-4 d-none lg:d-flex fw-semibold" data-uc-scrollspy-nav="closet: > *; offset: 48; scroll: true;">
                                     <li><a href="/index">Home</a></li>
-                                    <li><a href="about">About us</a></li>
+                                    <li><a href="/main/about">About us</a></li>
 
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle">
@@ -200,14 +200,14 @@
                                             <img src="../assets/images/icons/down.png" width="18" alt="">
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="shop">All Products</a></li>
-                                            <li><a href="shop?category=chocolate">Chocolates</a></li>
-                                            <li><a href="shop?category=bundles">Bundles</a></li>
-                                            <li><a href="shop?category=offers">Offers</a></li>
+                                            <li><a href="/main/shop">All Products</a></li>
+                                            <li><a href="/main/shop?category=chocolate">Chocolates</a></li>
+                                            <li><a href="/main/shop?category=bundles">Bundles</a></li>
+                                            <li><a href="/main/shop?category=offers">Offers</a></li>
                                         </ul>
                                     </li>
                                     
-                                    <li><a href="blogs">Blogs</a></li>
+                                    <li><a href="/main/blogs">Blogs</a></li>
                                     <li class="dropdown">
                                         <a href="#" class="catalogueDropdown-toggle">
                                             Catalogue
@@ -245,7 +245,7 @@
                                 </ul>
                             </div>
                             <div class="uc-navbar-right">
-                                <a style="background-color: white; color: #E31E23; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 d-none lg:d-inline-flex" href="contact">
+                                <a style="background-color: white; color: #E31E23; font-family: aeonik;" class="btn btn-sm xl:btn-md btn-secondary border border-2 border-black contrast-shadow-sm -rotate-2 hover:rotate-0 d-none lg:d-inline-flex" href="/main/contact">
                                     <span>Get in touch</span>
                                 </a>
                                 <a style="background-color: #F6B149;" class="btn btn-md btn-secondary w-48px h-48px p-0 border border-2 border-black contrast-shadow-sm d-inline-flex lg:d-none" href="#uc-menu-panel" data-uc-toggle>
@@ -404,33 +404,8 @@
                     const response = await fetch("backend/get_categories.php");
                     const categories = await response.json();
 
-                    // Mock data
-                    // categories = [
-                    //     {
-                    //         id: 1,
-                    //         name: 'Offers',
-                    //         count: 2
-                    //     },
-                    //     {
-                    //         id: 2,
-                    //         name: 'Bundles',
-                    //         count: 2
-                    //     },
-                    //     {
-                    //         id: 3,
-                    //         name: 'Combos',
-                    //     },
-                    //     {
-                    //         id: 4,
-                    //         name: 'Chocolates',
-                    //     },
-                    //     {
-                    //         id: 4,
-                    //         name: 'Chocolates',
-                    //     },
-                    // ]
-            
-                    const totalCount = 0;
+           
+                    const totalCount = categories.reduce((acc, category) => acc + (parseInt(category.count) || 0), 0);
                     if (categories.length > 0) {
                         categoryContainer.innerHTML = `
                             <h2 id="0" style="color: #FEE0A9;">
@@ -542,5 +517,5 @@
 
 </body>
 
-<!-- Mirrored from html.reactheme.com/muchwowindex by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:46 GMT -->
+<!-- Mirrored from html.reactheme.com/muchwow/main/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Feb 2025 10:46:46 GMT -->
 </html>
